@@ -58,7 +58,7 @@ export default class App extends Component<Props> {
           <TextInput placeholder="Massa" keyboardType="numeric" style={styles.input} onChangeText={(massa)=>{this.setState({massa})}}/>  
           <TextInput placeholder="Altura" keyboardType="numeric"style={styles.input} onChangeText={(altura)=>{this.setState({altura})}}/>  
         </View>
-      <TouchableOpacity style={styles.button} onPress={this.calcular}><Text style={styles.buttonText}>Calcular</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={this.calcular}><Text style={styles.buttonText}>Calcular IMC</Text></TouchableOpacity>
       <Text style={styles.resultado}>{this.state.resultado.toFixed(2)}</Text>
       <Text style={[styles.resultado, {fontSize:35} ]}>{this.state.resultadoText}</Text>
       </View>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     alignSelf: 'center',
-    padding: 30,
+    padding: 20,
     fontSize:25,
     color:"#6dc4a4",
     fontWeight: 'bold',
